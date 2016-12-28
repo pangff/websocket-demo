@@ -9,7 +9,7 @@ socket.on('request', function(request) {
 
     connection.on('message', function(message) {
         console.log(message.utf8Data);
-        connection.sendUTF('hello');
+        connection.sendUTF('hello'+request.headers.referer);
         setTimeout(function() {
             connection.sendUTF('this is a websocket example');
         }, 1000);

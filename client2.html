@@ -9,7 +9,7 @@
 </body>
 <script type="text/javascript">
     var content = document.getElementById('content');
-    var socket = new WebSocket('ws://182.92.184.206:1337');
+    var socket = new WebSocket('ws://editor.pffair.com:1337');
     socket.onopen = function () {
         socket.send('hello from the client');
     };
