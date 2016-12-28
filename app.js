@@ -8,8 +8,8 @@ socket.on('request', function(request) {
     var connection = request.accept(null, request.origin);
 
     connection.on('message', function(message) {
-        console.log(message.utf8Data);
-        connection.sendUTF('hello'+request.headers.referer);
+        console.log();
+        connection.sendUTF('hello:=origin:'+request.origin+'host:'+request.host);
         setTimeout(function() {
             connection.sendUTF('this is a websocket example');
         }, 1000);
